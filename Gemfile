@@ -4,9 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 5.2.2'
+##########################
+gem 'time_diff', '~> 0.3.0'
+gem 'time_difference'
+gem 'rails_12factor', '0.0.2'
+################################
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -15,7 +20,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
+gem 'rack-cors', :require => 'rack/cors'
+gem 'active_model_serializers', '~> 0.10.0'
+gem "responders"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
